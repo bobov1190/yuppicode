@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Python IDE</title>
+    <link rel="stylesheet" href="./sources/css/master.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./sources/img/svg/minilogo.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header__icons">
+            <div class="header__icon"><img src="./sources/img/svg/logo.svg" alt="logo"></div>
+            <div class="header__icon"><img src="./sources/img/svg/code.svg" alt="code"></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__code">
+            <div class="main__topfiller">
+                <div class="main__filename" id="fileName" contenteditable="true" spellcheck="false">SimpleNN.py</div>
+                <div class="main__controls">
+                    <button class="main__downloadbtn" id="downloadBtn" title="Скачать .py файл">
+                        <img src="https://img.icons8.com/material-rounded/24/download--v1.png" alt="Download">
+                    </button>
+                    <button class="main__startbtn" id="startBtn">
+                        <img src="./sources/img/picon_run.png" alt="Run">
+                    </button>
+                </div>
+            </div>
+            <div class="main__editor-container">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <div class="main__wrapper">
+                    <div class="main__backdrop" id="backdrop"></div>
+                    <textarea class="main__editor" id="editor" spellcheck="false" placeholder="Напишите ваш код здесь..."></textarea>
+                    <ul id="autocomplete-list" class="autocomplete-suggestions" style="display: none;"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main__console" id="mainConsole">
+            <pre class="main__output" id="output"></pre>
+            <div class="input-line" id="inputLine" style="display: none;">
+                <span class="input-prompt" id="inputPrompt"></span>
+                <input type="text" class="terminal-input" id="termInput" spellcheck="false">
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://skulpt.org/js/skulpt.min.js"></script>
+    <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="./sources/js/main.js"></script>
+</body>
+</html>
